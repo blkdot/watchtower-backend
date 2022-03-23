@@ -1,0 +1,55 @@
+[
+  {
+    "address": "0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657",
+    "riskRating": 9
+  },
+  {
+    "address": "0x4a8a99ac4e7973d20eb9e64db8eb94781dc80ba0",
+    "mintEnabled": false,
+    "riskRating": 8
+  },
+  {
+    "address": "0x18B57A558e9fEBBa7f30C79f71fB44D5348B207c",
+    "mintEnabled": false,
+    "riskRating": 8
+  },
+  {
+    "address": "0x4673f018cc6d401aad0402bdbf2abcbf43dd69f3",
+    "mintEnabled": false,
+    "riskRating": 4
+  },
+  {
+    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "riskRating": 4
+  },
+  {
+    "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+    "riskRating": 4
+  },
+  {
+    "address": "0x60Bbc91be24850636eE3028dfC309e755A4e3411",
+    "renounceOwnership": true,
+    "riskRating": 9
+  },
+  {
+    "address": "0xfb47e699facdf4493614b90234691b62a55a484c",
+    "mintEnabled": false,
+    "riskRating": 6
+  },
+  {
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+    "totalSupply": 6712581,
+    "honeypot": "OK",
+    "riskRating": 8
+  },
+  {
+    "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "totalSupply": 8091854,
+    "riskRating": 8
+  },
+  {
+    "address": "0x3969fe107bae2537cb58047159a83c33dfbd73f9",
+    "riskRating": 6,
+    "liquidityPools": []
+  }
+]

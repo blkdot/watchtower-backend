@@ -1,0 +1,101 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="The Ethereum BlockChain Explorer, API and Analytics Platform">
+<meta name="author" content="etherscan.io">
+<meta name="keywords" content="ethereum, explorer, ether, search, blockchain, crypto, currency">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href='/images/favicon2.ico'>
+<link rel="stylesheet" href="/assets/vendor/font-awesome/css/fontawesome-all.min.css?v=21.8.5.0">
+<link rel="stylesheet" href="/assets/css/theme.min.css?v=21.8.5.0">
+<style>
+        #overlay {
+      
+            color: #666666;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 5000;
+            top: 0;
+            left: 0;
+            float: left;
+            text-align: center;
+           
+           
+        }
+    </style>
+</head>
+<body id="body">
+<script>window.parent.isFrameLoading = true;</script>
+<div id="overlay">
+<img src="/images/main/loadingblock.svg" alt="Loading" />
+</div>
+<span id="lblWarning"></span>
+<div id="maintable">
+<div class="d-lg-flex justify-content-between align-items-center mb-2">
+<a id="linkTokenHoldersChart" class="btn btn-xss btn-soft-primary" href="/token/tokenholderchart/0xbcde8cc87a500d087cd44efafb70490572d1bace" target="_parent"><i class="fa fa-chart-pie mr-1"></i>Token Holders Chart</a>
+</div>
+<div class="d-md-flex justify-content-between mb-4">
+<p class="mb-2 mb-md-0"><i id="spinwheel" class="fa fa-spin fa-spinner fa-1x fa-pulse mr-1" style="display: none;"></i>
+A total of 1 token holder
+</p>
+<nav aria-label="page navigation">
+<ul class="pagination pagination-sm mb-0"><li class="page-item disabled"><span class="page-link">First</span></li><li class="page-item disabled"><span class="page-link"><i class="fa fa-chevron-left small"></i></span><span class="sr-only">Previous</span></li><li Class="page-item disabled"><span Class="page-link text-nowrap">Page <strong class="font-weight-medium">1</strong> of <strong class="font-weight-medium">1</strong></span></li><li class="page-item disabled"><span class="page-link"><i class="fa fa-chevron-right small"></i></span><span class="sr-only">Previous</span></li><li class="page-item disabled"><span class="page-link">Last</span></li>
+</nav>
+</div>
+<div>
+<table class="table table-md-text-normal table-hover">
+<thead class="thead-light">
+<tr>
+<th scope="col" width="1">Rank</th>
+<th scope="col">Address</th>
+<th scope="col">Quantity
+</th>
+<th scope="col">Percentage</th>
+<th id="col_analytics_Title" scope="col">Analytics</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><span data-toggle='tooltip' title='Public Tag: Black Hole: 0x000…000&#10;(0x0000000000000000000000000000000000000000)'><a href='/token/0xbcde8cc87a500d087cd44efafb70490572d1bace?a=0x0000000000000000000000000000000000000000' target='_parent'>Black Hole: 0x000…000</a></span></td><td>0.000000000000001</td><td>0.0000% <div class="progress mt-1" style="height:2px;"><div class="progress-bar bg-primary" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div></td><td><a href='/token/0xbcde8cc87a500d087cd44efafb70490572d1bace?a=0x0000000000000000000000000000000000000000#tokenAnalytics' target='_parent'><i class="ml-2 fas fa-chart-line fa-lg"></i></a></td></tr>
+</tbody>
+</table>
+<div class="d-flex justify-content-md-end align-items-center text-secondary mb-2 mb-md-0 my-3">
+<div class="d-inline-block">
+</div>
+</div>
+</div>
+</div>
+</body>
+<script src="/assets/vendor/jquery/dist/jquery.min.js?v=21.8.5.0"></script>
+<script src="/assets/vendor/popper.js/dist/umd/popper.min.js?v=21.8.5.0"></script>
+<script src="/assets/vendor/bootstrap/bootstrap.min.js?v=21.8.5.0"></script>
+<script>
+        $(window).on('load', function () {
+            $('#overlay').fadeOut();        
+            window.parent.document.getElementById('loadingtxframe2').style.display = 'none';
+        });
+        $(document).ready(function () {
+            $('.page-link').click(function () {
+                window.parent.document.getElementById('overlayMain').style.display = 'block';
+            });
+
+            $("[data-toggle='tooltip']").tooltip();
+        });
+        function move(strlink) {
+            $('#overlay').show();
+            $('#overlay').fadeIn();      
+            window.location = "/token/" + strlink.replace('+', '%2b');
+        }
+        setTimeout(function () {
+            window.parent.token_holders_loaded = true;
+            var obj = window.parent.document.getElementById('tokeholdersiframe');
+            parent.resizeIframe(obj, 0);
+            window.parent.isFrameLoading = false;
+            window.parent.document.getElementById('overlayMain').style.display = 'none';
+        }, 200);   
+
+    </script>
+</html>
